@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Social Media</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      .profile-img {
+        width: 100px; /* Ukuran gambar */
+        height: 100px; /* Ukuran gambar */
+        object-fit: cover; /* Memastikan gambar tetap terjaga proporsinya */
+        border-radius: 50%; /* Membuat gambar berbentuk lingkaran */
+        border: 5px solid #ccc; /* Memberikan border ringan di sekitar gambar */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Start -->
+    <nav class="navbar bg-warning fw-semibold">
+      <div class="container-fluid"></div>
+      <div class="container-fluid">
+        <a class="navbar-brand fs-3" href="#">
+          <img
+            src="assets/img/logo.jpg"
+            alt="Logo"
+            width="30"
+            height="24"
+            class="d-inline-block align-text-top"
+          />
+          ZetSph Store
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html"
+                >Halaman Produk</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Keranjang Belanja</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Others</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="social.html">Social Media</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="contact.html">Contact Me</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Header End -->
+
+    <!-- Main Start -->
+    <main class="px-4 py-5 mt-3">
+      <section>
+        <h1 class="text-center mb-4">Follow Me :</h1>
+        <div class="container">
+          <div class="row">
+            <!-- Card untuk Facebook -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+              <div class="card shadow-sm">
+                <div class="card-body text-center">
+                  <img
+                    src="assets/img/profile.jpg"
+                    alt="Profile Picture"
+                    class="profile-img mb-3"
+                  />
+                  <i class="fab fa-facebook fa-4x text-primary mb-3"></i>
+                  <h5 class="card-title">Facebook</h5>
+                  <p class="card-text">
+                    Follow me on Facebook to stay connected!
+                  </p>
+                  <a
+                    href="https://facebook.com"
+                    target="_blank"
+                    class="btn btn-primary"
+                    >Visit Facebook</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Card untuk Instagram -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+              <div class="card shadow-sm">
+                <div class="card-body text-center">
+                  <img
+                    src="assets/img/profile.jpg"
+                    alt="Profile Picture"
+                    class="profile-img mb-3"
+                  />
+                  <i class="fab fa-instagram fa-4x text-danger mb-3"></i>
+                  <h5 class="card-title">Instagram</h5>
+                  <p class="card-text">
+                    Follow my photos and stories on Instagram!
+                  </p>
+                  <a
+                    href="https://instagram.com"
+                    target="_blank"
+                    class="btn btn-danger"
+                    >Visit Instagram</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Card untuk Twitter -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+              <div class="card shadow-sm">
+                <div class="card-body text-center">
+                  <img
+                    src="assets/img/profile.jpg"
+                    alt="Profile Picture"
+                    class="profile-img mb-3"
+                  />
+                  <i class="fab fa-twitter fa-4x text-info mb-3"></i>
+                  <h5 class="card-title">Twitter</h5>
+                  <p class="card-text">
+                    Stay updated with my tweets on Twitter!
+                  </p>
+                  <a
+                    href="https://twitter.com"
+                    target="_blank"
+                    class="btn btn-info"
+                    >Visit Twitter</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Card untuk LinkedIn -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+              <div class="card shadow-sm">
+                <div class="card-body text-center">
+                  <img
+                    src="assets/img/profile.jpg"
+                    alt="Profile Picture"
+                    class="profile-img mb-3"
+                  />
+                  <i class="fab fa-linkedin fa-4x text-primary mb-3"></i>
+                  <h5 class="card-title">LinkedIn</h5>
+                  <p class="card-text">
+                    Connect with me professionally on LinkedIn.
+                  </p>
+                  <a
+                    href="https://linkedin.com"
+                    target="_blank"
+                    class="btn btn-primary"
+                    >Visit LinkedIn</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Card untuk YouTube -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+              <div class="card shadow-sm">
+                <div class="card-body text-center">
+                  <img
+                    src="assets/img/profile.jpg"
+                    alt="Profile Picture"
+                    class="profile-img mb-3"
+                  />
+                  <i class="fab fa-youtube fa-4x text-danger mb-3"></i>
+                  <h5 class="card-title">YouTube</h5>
+                  <p class="card-text">Watch my latest videos on YouTube!</p>
+                  <a
+                    href="https://youtube.com"
+                    target="_blank"
+                    class="btn btn-danger"
+                    >Visit YouTube</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Card untuk GitHub -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+              <div class="card shadow-sm">
+                <div class="card-body text-center">
+                  <img
+                    src="assets/img/profile.jpg"
+                    alt="Profile Picture"
+                    class="profile-img mb-3"
+                  />
+                  <i class="fab fa-github fa-4x text-dark mb-3"></i>
+                  <h5 class="card-title">GitHub</h5>
+                  <p class="card-text">
+                    Explore my repositories and projects on GitHub!
+                  </p>
+                  <a
+                    href="https://github.com/ZetSphere"
+                    target="_blank"
+                    class="btn btn-dark"
+                    >Visit GitHub</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Main End -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
