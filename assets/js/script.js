@@ -91,8 +91,8 @@ function displayProducts(productsToDisplay) {
 displayProducts(products);
 
 searchForm.addEventListener("submit", function (event) {
-  event.preventDefault(); 
-  const searchQuery = searchInput.value.toLowerCase(); 
+  event.preventDefault();
+  const searchQuery = searchInput.value.toLowerCase();
 
   const filteredProducts = products.filter((product) =>
     product.nama.toLowerCase().includes(searchQuery)
