@@ -1,4 +1,3 @@
-// Data produk (dengan gambar berdasarkan nama produk)
 const products = [
   {
     nama: "Thinkpad T1 Carbon",
@@ -50,9 +49,8 @@ const productContainer = document.getElementById("product-container");
 const searchInput = document.getElementById("search-input");
 const searchForm = document.getElementById("search-form");
 
-// Fungsi untuk menampilkan produk dengan card
 function displayProducts(productsToDisplay) {
-  productContainer.innerHTML = ""; // Bersihkan sebelumnya
+  productContainer.innerHTML = "";
   productsToDisplay.forEach((product) => {
     const productCard = document.createElement("div");
     productCard.classList.add("card", "col-12", "col-sm-2", "col-md-2", "mb-4");
@@ -74,7 +72,6 @@ function displayProducts(productsToDisplay) {
     productContainer.appendChild(productCard);
   });
 
-  // Menambahkan event listener untuk tombol "+ Keranjang"
   const buttons = document.querySelectorAll(".add-to-cart");
   buttons.forEach((button) => {
     button.addEventListener("click", (event) => {
@@ -82,7 +79,6 @@ function displayProducts(productsToDisplay) {
       const nama = event.target.getAttribute("data-nama");
       const harga = event.target.getAttribute("data-harga");
 
-      // Menyimpan produk yang dipilih ke localStorage
       let keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
       keranjang.push({ id, nama, harga });
       localStorage.setItem("keranjang", JSON.stringify(keranjang));
@@ -92,19 +88,15 @@ function displayProducts(productsToDisplay) {
   });
 }
 
-// Tampilkan produk awal
 displayProducts(products);
 
-// Event listener untuk form pencarian
 searchForm.addEventListener("submit", function (event) {
-  event.preventDefault(); // Menghindari refresh halaman
-  const searchQuery = searchInput.value.toLowerCase(); // Ambil nilai pencarian dan ubah ke lowercase
+  event.preventDefault(); 
+  const searchQuery = searchInput.value.toLowerCase(); 
 
-  // Filter produk berdasarkan nama yang mengandung query pencarian
   const filteredProducts = products.filter((product) =>
     product.nama.toLowerCase().includes(searchQuery)
   );
 
-  // Tampilkan produk yang sudah difilter
   displayProducts(filteredProducts);
 });
