@@ -63,7 +63,9 @@ function displayProducts(productsToDisplay) {
       <div class="card-body">
         <h5 class="card-title">${product.nama}</h5>
         <p class="card-text">Rp ${parseInt(product.harga).toLocaleString()}</p>
-        <a href="#" class="btn btn-dark">Beli Sekarang</a>
+        <a href="https://wa.me/6285363001781?text=Halo%20ZetSph%20Store,%20Saya%20ingin%20Membeli%20${
+          product.nama
+        }" class="btn btn-dark">Beli Sekarang</a>
         <a href="#" class="btn btn-warning mt-1 add-to-cart" data-id="1" data-nama="${
           product.nama
         }" data-harga="${product.harga}">+ Keranjang</a>

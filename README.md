@@ -36,9 +36,3 @@ Saya Masih Belajar, Jadi saya merasa sangat senang jika ada yang ingin berkontri
 2. Buat cabang baru (branch) dengan fitur atau perbaikan yang ingin Anda buat.
 3. Lakukan perubahan di cabang tersebut.
 4. Kirim pull request untuk perubahan Anda.
-
-## Lisensi
-
-Proyek ini menggunakan lisensi MIT. Silakan lihat file `LICENSE` untuk informasi lebih lanjut.
-
----

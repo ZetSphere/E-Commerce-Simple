@@ -84,26 +84,21 @@
     <!-- Main Start -->
     <main class="px-4 py-2 mt-3">
       <h1>Keranjang Belanja Anda</h1>
-      <div id="keranjang-container">
-        <!-- Produk dalam keranjang akan dimuat di sini -->
-      </div>
+      <div id="keranjang-container"></div>
     </main>
 
     <!-- Main End -->
 
     <script>
-      // Mengambil produk yang ada di keranjang dari localStorage
       const keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
       const keranjangContainer = document.getElementById("keranjang-container");
 
-      // Jika keranjang kosong
       if (keranjang.length === 0) {
         keranjangContainer.innerHTML =
           "<p>Keranjang Anda kosong, Silahkan Masukkan Barang Ke Keranjang Belanja Anda.</p>";
       } else {
         let totalHarga = 0;
 
-        // Menampilkan setiap produk dalam keranjang
         keranjang.forEach((item, index) => {
           const produkElement = document.createElement("div");
           produkElement.classList.add("card", "mb-3");
@@ -120,13 +115,11 @@
           totalHarga += parseInt(item.harga);
         });
 
-        // Menampilkan total harga
         const totalElement = document.createElement("div");
         totalElement.innerHTML = `<h3>Total: Rp ${totalHarga.toLocaleString()}</h3>`;
         keranjangContainer.appendChild(totalElement);
       }
 
-      // Menambahkan event listener untuk tombol hapus
       keranjangContainer.addEventListener("click", function (event) {
         if (event.target.classList.contains("remove-item")) {
           const index = event.target.getAttribute("data-index");
@@ -134,19 +127,14 @@
         }
       });
 
-      // Fungsi untuk menghapus item dari keranjang
       function removeItemFromCart(index) {
-        // Mengambil data keranjang dari localStorage
         let keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
 
-        // Menghapus item berdasarkan index
         keranjang.splice(index, 1);
 
-        // Menyimpan kembali ke localStorage
         localStorage.setItem("keranjang", JSON.stringify(keranjang));
 
-        // Memperbarui tampilan
-        location.reload(); // Muat ulang halaman untuk menampilkan data terbaru
+        location.reload();
       }
     </script>
     <script
